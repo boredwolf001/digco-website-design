@@ -18,6 +18,7 @@ header {
 }
 
 nav {
+  z-index: 30;
   padding: 20px 20px;
   display: flex;
   align-items: center;
@@ -37,6 +38,20 @@ nav .icon-nav {
   font-size: 25px;
 }
 
+.cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.cool-link:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
 nav .menuIcon {
   background: #fff;
   padding: 5px 15px;
@@ -49,7 +64,6 @@ nav .menuIcon {
 nav li {
   margin: 0 15px;
 }
-
 
 nav .btn-nav {
   position: relative;
@@ -112,7 +126,8 @@ p {
 
 .blob {
   position: absolute;
-  top: 50px;
+  z-index: 0;
+  top: 70px;
   left: 0;
 }
 
@@ -224,4 +239,8 @@ h3 {
 .navLinks a{
   text-decoration: none;
   color: #000;
+}
+
+.navLinks a:hover {
+  color: #3624bd;
 }
